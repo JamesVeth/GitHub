@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Universal Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <!-- Universal Top Header for each page -->
+    
+    <header class="header">
+    
+        <!-- Top Navbar Items -->
+
+        <nav class="navbar">
+            <a href="index.html"  style = "--del:1;">Home</a>
+            <a href="skills.html" style = "--del:2;">Skills</a>
+            <a href="portfolio.html" style = "--del:3;">Portfolio</a>
+            <a href="contact.html" style = "--del:4;">Contact</a>
+        </nav>
+
+        <!-- Personal Logo or Name -->
+
+        <div class="navbar_logo">James Vethamony</div>
+
+    </header>
+
+    <!-- Page Section -->
+
+    <section class = "page_contact">
+
+        <!-- Page Content -->
+        <h2 class = "page_heading">Contact Me</h2>
+        
+        <div class="contactContent_01">
+
+            <form class = "page_contactForm" action="https://formspree.io/f/xvoegvlk" method = "post">
+                <div class="input-box" style = "--del:5;">
+                    <label for="i_name">Full Name</label>
+                    <input type="text" name="n_name" id="i_name" placeholder="Enter Your Full Name">
+                </div>
+                <div class="input-box" style = "--del:6;">
+                    <label for="i_email">Email Address</label>
+                    <input type="email" name="n_email" id="i_email" placeholder="Enter Your Email Address">
+                </div>
+                <div class="input-box" style = "--del:7;">
+                    <label for="i_subject">Subject</label>
+                    <input type="text" name="n_subject" id="i_subject" placeholder="Enter Subject">
+                </div>
+                <div class="input-box" style = "--del:8;">
+                    <label for="i_textarea">Your Message</label>
+                    <textarea name="n_textarea" id="i_textarea" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                </div>
+
+                <input type="submit" value="Send Message" class = "page_button" style = "--del:9;">
+            </form>
+        </div>
+        
+
+    
+    </section>
+    
+    
+    <!-- Unversal Script -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

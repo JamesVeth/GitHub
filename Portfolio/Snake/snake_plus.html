@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake+</title>
+    <link rel="stylesheet" href="snake_plus.css">
+</head>
+<body>
+
+
+        
+    <div class= "container">
+
+        
+        <div class= "box" id = "box_controls">
+
+            <img id = "imglogo" src="../Snake/Images/logo_snake.png" alt="">
+
+            <div class = "tutorialText">Press Start or Retry to begin or reset. Move with arrow keys, and eat the red apple to grow larger.</div>
+            <div class = "controls">
+
+                <button class="moveBtn" id = "btnUp">UP</button></br>
+                <button class="moveBtn" id = "btnLeft">LEFT</button>
+                <button class="moveBtn" id = "btnDown">DOWN</button>
+                <button class="moveBtn" id = "btnRight">RIGHT</button>
+
+            </div>
+
+
+            <label for = "score">Score:</label>
+            <label for = "scoreText" id = "scoreText">0</label></br><br>
+            <button class = "resetBtn" id = "resetBtn">Start</button>
+
+            
+        </div>
+        
+
+        
+        <div class= "box" id = "box_game">
+            
+            <div id="gameContainer">
+                
+                <canvas id="gameBoard" width="500" height="500"></canvas>
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+    <script src="snake_plus.js"></script>
+    
+    <div class="div_button">
+        <a href="../../portfolio.html"><button class="page_button">Back to Portfolio</button></a>
+    </div>
+</body>
+</html>

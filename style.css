@@ -1,0 +1,564 @@
+/* ////// Unversal Styling /////////////////////// */
+
+:root {
+    --primary-bg-color: rgb(63, 7, 27);
+    --second-bg-color: rgb(83, 16, 40); /* Set your desired color */
+    
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+
+section{
+    margin-top: 3rem;
+}
+
+body {
+    background-color: rgb(15, 6, 15);
+    color: aliceblue;
+
+
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgb(211, 48, 105);
+
+    height: 60px;
+    width: 100%;
+    padding: 10px 10%;
+    /* Use Flex for our Header, as it's easier for linear arrangement */
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: var(--primary-bg-color);
+
+    transition: .1s;
+    animation: slideDown100 1s ease forwards;
+}
+
+.navbar {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 550;
+    text-align: center;
+
+    /* set the starting animation, with opacity starting at 0 */
+    opacity: 0;
+    animation: slideDown100 2s ease forwards;
+    /* animation: slideRight 1s ease forwards; */
+    /* cursor: pointer; */
+}
+
+/* Could use an Image Logo in the top and resize it */
+
+/* .navbar_logo img {
+    margin-left: 20px;
+    width: 50px;
+    height: auto;
+} */
+
+.navbar a{
+    /* Make each navbar link have a left margin spacing */
+    margin-left: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    color:  rgb(194, 0, 74);
+
+    transition: .3s;
+    opacity: 0;
+    animation: slideRight100 1s ease forwards;
+    animation-delay: calc(.2s * var(--del));
+
+ 
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: rgb(255, 255, 255);
+}
+
+
+
+.page_button{
+    /* padding x and y */
+    padding: 12px 30px; 
+    background: rgb(194, 0, 74);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(194, 0, 74);
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 1s;
+    animation: slideRight2000 1s ease forwards;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.page_button:hover {
+    color: rgb(194, 0, 74);
+    background:aliceblue;
+}
+
+
+h1 {
+
+    font-size: 32px;
+    font-weight: 700;
+    transition: .3s;
+    opacity: 0;
+    animation: slideDown100 1s ease forwards;
+}
+
+h2 {
+
+    font-size: 50px;
+    font-weight: 700;
+    transition: .2s;
+    opacity: 0;
+    animation: slideUp100 2s ease forwards;
+}
+
+h2.page_heading {
+
+    margin-left: 40px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 50px;
+    font-weight: 700;
+    transition: .2s;
+    opacity: 0;
+    animation: slideDown100 2s ease forwards;
+
+}
+
+
+h4 {
+
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ////// Individual Page Styling /////////////////////// */
+
+/* ////// page_home //////////////// */
+
+.page_home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 20% 0;
+    
+}
+
+.page_home h1,
+.page_home h2,
+.page_home p  {
+    padding: 20px;
+}
+
+.page_homeContent_01 {
+
+    max-width: 600;
+    margin-right: -20px;
+    
+}
+
+.page_homeContent_01 p{
+    font-size: 1.2rem;
+    transition: .2s;
+    opacity: 0;
+    animation: slideRight100 2s ease forwards;
+
+}
+
+.page_homeImage_01 img{
+    max-width: 250px;
+    float: left;
+    margin-right: 10px;
+    transition: .2s;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+/* ////// page_portfolio //////////////// */
+
+.page_portfolioBox {
+
+    text-align: center;
+    transition: .2s;
+    opacity: 0;
+    animation: slideRight100 1s ease forwards;
+    animation-delay: calc(.3s * var(--del));
+    background-color: black;
+    border-radius: 23px;
+    border: solid 2px rgb(194, 0, 74);
+    box-shadow: 0 0 4rem rgb(194, 0, 74,0.2);
+    /* Overflow prevents the images, etc, appearing outside of the box */
+    overflow: hidden;
+    margin: 10px;
+}
+
+.page_portfolioBox:hover{
+    transition: 1s;
+    box-shadow: 0 0 6rem rgb(194, 0, 74);
+}
+
+.page_portfolioContent_01 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+
+.page_portfolioContent_01 .page_portfolioBox img {
+    width:70%;
+    height: auto;
+}
+
+.page_portfolioLayer {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(194, 0, 74, 0.5), rgba(51, 3, 23, 0.7)); /* Adjust the alpha (last value) as needed */
+    text-align: center;
+} 
+
+
+
+/* ////// page_contact //////////////// */
+
+.contactContent_01 {
+    width: 60%;
+    margin: 1rem auto 3rem;
+
+}
+
+.contactContent_01 form {
+    
+    margin: 1rem auto 3rem;
+    text-align: center;
+    
+}
+
+.contactContent_01 form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.contactContent_01 form input,
+.contactContent_01 form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: rgb(194, 0, 74);
+    font-weight: 600;
+    background: aliceblue;
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+    border: 3px solid rgb(194, 0, 74);
+}
+
+.contactContent_01 form input,
+.contactContent_01 form textarea,
+.contactContent_01 form label,
+.contactContent_01 form .page_button{
+    transition: .3s;
+    opacity: 0;
+    animation: slideRight100 1s ease forwards;
+    animation-delay: calc(.2s * var(--del));
+}
+
+.contactContent_01 form textarea {
+    resize: none;
+}
+
+.page_contact .page_button {
+    text-align: center;
+    margin-top: 2rem; /* Adjust the margin as needed */
+    width: auto;
+    /* padding x and y */
+    padding: 12px 30px; 
+    background: rgb(194, 0, 74);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(194, 0, 74);
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.page_contact .page_button:hover {
+    color: rgb(194, 0, 74);
+    background:aliceblue;
+}
+
+.page_contact input:hover, textarea:hover {
+
+    transition: 1s;
+    box-shadow: 0 0 2rem rgb(194, 0, 74);
+}
+
+/* ////// page_skills //////////////// */
+
+.page_skills{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin: 4rem auto; /* Set auto margin to horizontally center */
+    gap: 2rem;
+    margin-bottom: 5rem;
+    width: 60%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.page_skills img {
+    width: 50px;
+    height: 50px;
+    /* box-shadow: 0 0 4rem rgb(194, 0, 74,1); */
+    box-shadow: 0 0 5rem rgb(0, 0, 0);
+}
+
+.page_skills .page_skillsBox {
+    transition: .3s;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: calc(.2s * var(--del));
+}
+
+.page_skills h4:hover {
+
+    transition: 1s;
+    text-shadow: 0 0 4rem rgb(194, 0, 74);
+}
+
+
+
+/* ////// Resize Styling /////////////////////// */
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 45em) {
+    .page_home {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .page_home .page_homeImage_01 {
+
+        order: -1; /* Place the image at the top */
+
+    }
+}
+
+@media (max-width: 70em) {
+    .page_portfolioContent_01, .page_skills {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 4rem auto;
+    }
+}
+
+@media (max-width: 50em) {
+    .page_portfolioContent_01, .page_skills {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 4rem auto;
+    }
+
+
+}
+
+@media (max-width: 45em) {
+    .page_portfolioContent_01, .page_skills {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 4rem auto;
+        
+    }
+    .navbar a {
+
+        margin-top: .3rem;
+        font-size: 13px;
+        font-weight: 900;
+
+    }
+    .navbar_logo {
+        display: none;
+
+    }
+
+    
+}
+
+/* ////// Animation /////////////////////// */
+
+/* slide 100 */
+
+@keyframes slideRight100 {
+
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft100 {
+
+    0% {
+        transform: translateX(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp100 {
+
+    0% {
+        transform: translateY(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown100 {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+/* zoom */
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(95);
+        opacity: 1;
+    }
+}
+
+/* slide 2000 */
+
+@keyframes slideRight2000 {
+
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft2000 {
+
+    0% {
+        transform: translateX(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp2000 {
+
+    0% {
+        transform: translateY(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown2000 {
+
+    0% {
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}

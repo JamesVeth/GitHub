@@ -1,0 +1,276 @@
+
+body{
+
+    background-color: rgb(125, 162, 117);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.calculator-container {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.page_button{
+    /* padding x and y */
+    padding: 12px 30px; 
+    background: rgb(194, 0, 74);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(194, 0, 74);
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 1s;
+    animation: slideRight2000 1s ease forwards;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.page_button:hover {
+    color: rgb(194, 0, 74);
+    background:aliceblue;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: greenyellow;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6); 
+}
+
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 23px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.calculator .inputText {
+
+    grid-column: span 5;
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    text-align: right;
+    
+}
+
+.calculator .operatorButton, .numberButton {
+
+    grid-column: span 1fr;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    
+}
+
+.calculator button {
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.calculator button:hover{
+    box-shadow: 0 0 5px rgb(1, 1, 1);
+
+
+}
+
+.calculator .operatorButton {
+
+    background-color: rgb(142, 255, 122);
+    
+}
+
+.calculator #clearButton, #equalsBtn {
+
+    background-color: rgb(229, 245, 0);
+    
+}
+
+.calculator #equalsBtn {
+
+    grid-column: span 3;
+    
+    
+}
+
+.calculator button {
+    cursor: pointer;
+}
+
+/* ////// Resize Styling /////////////////////// */
+
+
+@media (max-width: 60em) {
+    .page_calculator h1, .page_calculator .calculator {
+        margin: 4rem auto;
+    }
+}
+
+
+/* ////// Animation /////////////////////// */
+
+/* slide 100 */
+
+@keyframes slideRight100 {
+
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft100 {
+
+    0% {
+        transform: translateX(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp100 {
+
+    0% {
+        transform: translateY(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown100 {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+/* zoom */
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(95);
+        opacity: 1;
+    }
+}
+
+/* slide 2000 */
+
+@keyframes slideRight2000 {
+
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft2000 {
+
+    0% {
+        transform: translateX(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp2000 {
+
+    0% {
+        transform: translateY(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown2000 {
+
+    0% {
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}

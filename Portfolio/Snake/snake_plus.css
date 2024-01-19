@@ -1,0 +1,355 @@
+
+
+
+body {
+
+
+    font-family: Arial;
+    background-color:rgb(143, 218, 149);
+
+}
+
+
+/* style.css */
+
+.container{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    
+}
+
+.box{
+    display: grid;
+    text-align: center;
+    border-radius: 7px;    
+    padding: 12px;
+    margin: 10px;
+    width: 500px;
+    height: 500px;
+    font-size: 8em;
+    background-color: hsl(200, 53%, 31%);
+    color: rgb(143, 218, 149);
+    font-size: 23px;
+    box-shadow: 0 8px 32px 0 rgba(15, 16, 38, 0.40);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 2px solid rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(2,127,165,1) 0%, rgba(0,90,119,1) 51%, rgba(0,46,59,1) 100%);
+    
+
+}
+
+
+.box #box_controls {
+    display: grid;
+    justify-content: center;
+    align-items: sp;
+    color: rgb(143, 218, 149);
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+#resetBtn {
+
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(143, 218, 149);
+    width: 100px;
+    height: 50px;
+    font-size: 22px;
+    border: 4px solid;
+    border-radius: 9px;
+    cursor: pointer;
+    justify-self: center;
+}
+
+
+#imglogo{
+    justify-self: center;
+    width: 60%;
+}
+
+/* Back to Portfolio Button */
+
+
+.page_button{
+    /* padding x and y */
+    padding: 12px 30px; 
+    background: rgb(194, 0, 74);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(194, 0, 74);
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 1s;
+    
+    animation: slideRight2000_button 1s ease forwards;
+    text-align: center;
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+.page_button:hover {
+    color: rgb(194, 0, 74);
+    background:aliceblue;
+}
+
+/* Game Controls */
+.moveBtn {
+    margin: 0.2rem;
+    width: 25%;
+
+    padding: 12px 30px; 
+    background: rgb(232, 65, 62);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+/* if the width of the viewport is equal to or greater than xem */
+@media (min-width: 60em) {
+
+    .moveBtn {
+        display: none;
+    }
+  }
+
+
+@media (max-width: 50em) {
+    .container {
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+
+}
+
+/* if the width of the viewport is equal to or less than xem.*/
+@media (max-width: 70em) {
+
+    .container {
+
+      flex-direction: column;
+      gap: 10px;
+      text-align: center; /* Center the content horizontally within the container */
+
+    
+    }
+
+
+
+    #box_controls {
+
+      order: 2; /* Switch the order for smaller screens, box1 comes second */
+      margin: auto; /* Center the box horizontally */
+      
+    }
+  
+    #box_game {
+
+      order: 1; /* Switch the order for smaller screens, box2 comes first */
+      margin: auto; /* Center the box horizontally */
+
+    }
+    
+    .tutorialText {
+        display: none;
+    }
+
+    #imglogo{
+        width: 40%;
+
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////// Animation /////////////////////// */
+
+/* slide 100 */
+
+@keyframes slideRight100 {
+
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft100 {
+
+    0% {
+        transform: translateX(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp100 {
+
+    0% {
+        transform: translateY(+100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown100 {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+/* zoom */
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(95);
+        opacity: 1;
+    }
+}
+
+/* slide 2000 */
+@keyframes slideRight2000_button {
+
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes slideRight2000 {
+
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft2000 {
+
+    0% {
+        transform: translateX(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideUp2000 {
+
+    0% {
+        transform: translateY(+2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideDown2000 {
+
+    0% {
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
