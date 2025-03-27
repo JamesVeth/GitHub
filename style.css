@@ -214,6 +214,10 @@ h4 {
 
 .page_portfolioBox {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     text-align: center;
     transition: .2s;
     opacity: 0;
@@ -246,7 +250,6 @@ h4 {
 }
 
 .page_portfolioLayer {
-    margin-bottom: 1rem;
     padding: 1rem;
     bottom: 0;
     left: 0;
