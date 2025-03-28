@@ -17,9 +17,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
     
 }
 
@@ -122,81 +119,72 @@ body {
     cursor:pointer;
 }
 
-/* if the width of the viewport is equal to or greater than xem */
-@media (min-width: 60em) {
+
+
+
+
+/* Hide the controls for desktop mode */
+@media only screen and (min-width: 700px) {
 
     .moveBtn {
         display: none;
     }
   }
+/* @media only screen and (max-width: 550px) */
 
+@media only screen and (max-width: 1000px)  {
 
-@media (max-width: 50em) {
-    .container {
-        transform: scale(0.7);
-        transform-origin: top left;
+    body {
+        margin: 0;
+        padding: 0;
     }
 
-}
-
-/* if the width of the viewport is equal to or less than xem.*/
-@media (max-width: 70em) {
-
-    .container {
-
-      flex-direction: column;
-      gap: 10px;
-      text-align: center; /* Center the content horizontally within the container */
-
-    
-    }
-
-
-
-    #box_controls {
-
-      order: 2; /* Switch the order for smaller screens, box1 comes second */
-      margin: auto; /* Center the box horizontally */
-      
-    }
-  
-    #box_game {
-
-      order: 1; /* Switch the order for smaller screens, box2 comes first */
-      margin: auto; /* Center the box horizontally */
-
+    .moveBtn {
+        display:inline-block;
     }
     
     .tutorialText {
         display: none;
     }
 
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;  
+        height: auto;
+        transform: scale(0.6);  
+        display: flex;
+        flex-direction: column;
+        transform-origin: top;
+        text-align: center;  
+    }
+
+    .div_button {
+        position: fixed;  
+        left: 20px;  
+        transform: translateX(-50%);  
+        bottom: 12vh;
+        text-align: center;
+        z-index: 10; 
+        transform: scale(0.6);  
+    }
+    
+    
+
+    #box_controls {
+        order: 2; /* Switch the order for smaller screens, box1 comes second */
+    }
+  
+    #box_game {
+        order: 1; /* Switch the order for smaller screens, box2 comes first */
+    }
+    
     #imglogo{
         width: 40%;
-
     }
 
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
