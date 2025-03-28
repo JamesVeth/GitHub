@@ -8,6 +8,7 @@ const boardBackground = "rgb(175, 255, 229,0.8)";
 const snakeColor = "lightgreen";
 const snakeBorder = "white";
 let lastColorChangeScore = 0; // random food colour
+let timerId;
 
 const foodBorder = "white";
 
@@ -86,7 +87,7 @@ function nextTick(){
 
     if(running){
 
-        timeout(()=>{
+        timerId = setTimeout(()=>{
 
             clearBoard();
             drawFood();
@@ -411,7 +412,7 @@ function resetGame(){
 
     ];
 
-    clearTimeout(timeout);
+    clearTimeout(timerId);
     gameStart();
 
 };
